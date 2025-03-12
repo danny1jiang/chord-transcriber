@@ -5,7 +5,7 @@ const initialState = {
 	playing: false,
 };
 
-export default function mediaReducer(state = initialState, action) {
+export function mediaReducer(state = initialState, action) {
 	switch (action.type) {
 		case "media/setFile": {
 			return {

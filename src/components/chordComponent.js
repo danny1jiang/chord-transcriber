@@ -8,6 +8,7 @@ import {
 import {useEffect, useState} from "react";
 import {setCursorTimeAction} from "../redux/mediaRedux/mediaReduxActions";
 
+const wHeight = window.innerHeight;
 const wWidth = window.innerWidth;
 
 const chordNames = {
@@ -46,6 +47,7 @@ export function ChordListComponent({chordInfo, secondsPerRow}) {
 	chordInfo = JSON.parse(chordInfo);
 
 	let rowChords = [];
+	let currentRowStart = 0;
 	let currentRow = 0;
 
 	for (let i = 0; i < chordInfo.length; i++) {

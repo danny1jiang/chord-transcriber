@@ -1,13 +1,9 @@
 import {useSelector} from "react-redux";
 import {mediaSelector, timeSelector} from "../redux/mediaRedux/mediReduxSelector";
 import ReactPlayer from "react-player";
-import {useEffect, useRef, useState} from "react";
+import {useEffect, useRef} from "react";
 import {store} from "../redux/reduxStore";
-import {
-	setCursorTimeAction,
-	setPlayingAction,
-	setTimeAction,
-} from "../redux/mediaRedux/mediaReduxActions";
+import {setCursorTimeAction, setPlayingAction} from "../redux/mediaRedux/mediaReduxActions";
 
 export function MediaPlayerComponent() {
 	const mediaUrl = useSelector(mediaSelector);

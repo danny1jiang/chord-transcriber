@@ -1,7 +1,5 @@
-import logo from "./logo.svg";
 import "./App.css";
 import {useState} from "react";
-import Meyda from "meyda";
 import {ChordListComponent} from "./components/chordComponent";
 import {store} from "./redux/reduxStore";
 import {setMediaAction} from "./redux/mediaRedux/mediaReduxActions";
@@ -41,8 +39,6 @@ function App() {
 		setChordInfo(json);
 		const mediaUrl = URL.createObjectURL(selectedFile);
 		store.dispatch(setMediaAction(mediaUrl));
-		console.log(selectedFile);
-		console.log(json);
 		return true;
 	};
 
